@@ -1,0 +1,6 @@
+https://github.com/corkami/collisions
+https://github.com/corkami/collisions/blob/master/examples/poeMD5_A.pdf
+https://github.com/corkami/collisions/blob/master/examples/poeMD5_B.pdf
+
+#flag
+picoCTF{c0ngr4ts_u_r_1nv1t3d_aebcbf39}
