@@ -1,0 +1,3 @@
+Deobfuscate javascript
+Download wasm file: http://mercury.picoctf.net:44570./aD8SvhyVkb
+Using https://github.com/WebAssembly/wabt convert wasm -> C

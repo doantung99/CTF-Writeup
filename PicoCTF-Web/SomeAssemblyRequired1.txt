@@ -1,0 +1,3 @@
+Deobfuscate javascript
+Download wasm file: http://mercury.picoctf.net:40226./JIFxzHyW8W
+strings JIFxzHyW8W | grep 'picoCTF'
