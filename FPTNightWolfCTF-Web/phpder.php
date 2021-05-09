@@ -20,7 +20,7 @@ class access_log
 	}
 }
 
-$log = "/flag";
+$log = "flag.txt";
 $obj = new access_log($log);
 echo(serialize($obj));
 echo("\n");
